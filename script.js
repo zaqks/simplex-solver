@@ -1,4 +1,3 @@
-
 // FRACTION CLASS
 class Fraction {
     constructor(numerator, denominator = 1) {
@@ -202,7 +201,7 @@ function displayOriginalProblem(parsed) {
 function displayStandardForm(standard, parsed) {
     const { tableau, numVars, numSlack } = standard;
 
-    let content = '<div class="section-title">📐 Forme Standard</div>';
+    let content = '<div class="section-title">📝 Forme Standard</div>';
     content += '<div class="info-badge">Variables d\'écart ajoutées</div>';
 
     for (let i = 0; i < numSlack; i++) {
@@ -226,10 +225,12 @@ function displayTableau(tableau, numVars, numSlack, basis, enteringCol = -1, lea
     const totalVars = numVars + numSlack;
     let html = '<table>';
 
+    // Header row with dots above basis variables
     html += '<tr><th>Base</th>';
     for (let j = 0; j < totalVars; j++) {
         const className = j === enteringCol ? 'entering-var' : '';
-        html += `<th class="${className}">x${j + 1}</th>`;
+        const dot = basis.includes(j) ? '•' : '';
+        html += `<th class="${className}">${dot ? dot + '<br>' : ''}x${j + 1}</th>`;
     }
     html += '<th>RHS</th></tr>';
 
