@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplexe AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="header">
+            <div class="logo">S</div>
+            <h1>Simplexe AI</h1>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message ai">
+                <div class="avatar ai">AI</div>
+                <div class="message-content">
+                    👋 Bonjour! Je suis votre assistant Simplexe. Entrez votre programme linéaire pour commencer
+                    l'optimisation.
+                    <div class="example-hint">Format: contraintes sur plusieurs lignes, dernière ligne = Z = ...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea id="userInput" placeholder="x1 + 3x2 + 2x3 ≤ 40
+3x1 + 2x2 + x3 ≤ 45
+Z = 10x1 + 14x2 + 12x3" rows="1"></textarea>
+                <button class="send-btn" id="sendBtn"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
